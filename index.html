@@ -4,41 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki Técnica ASIR - Guía de Comandos</title>
-    <!-- Enlaces a los archivos CSS -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="light.css">
 </head>
 <body>
 
-    <!-- Menú lateral -->
+    <!-- Menú lateral (Solo para navegación) -->
     <aside>
-        <div>
-            <div class="logo-area">
-                <h2>~/asir-wiki</h2>
-                <span>Administración de Sistemas</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#linux-basico">1. Linux: Permisos y Usuarios</a></li>
-                    <li><a href="#redes-linux">2. Redes y DNS en Linux</a></li>
-                    <li><a href="#cisco">3. Redes Cisco (IOS)</a></li>
-                    <li><a href="#subnetting">4. Tabla de Subnetting</a></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="#linux-basico">1. Linux: Permisos y Usuarios</a></li>
+                <li><a href="#redes-linux">2. Redes y DNS en Linux</a></li>
+                <li><a href="#cisco">3. Redes Cisco (IOS)</a></li>
+                <li><a href="#subnetting">4. Tabla de Subnetting</a></li>
+            </ul>
+        </nav>
         
         <!-- Botón para alternar el tema -->
         <button id="theme-toggle" class="theme-btn">☀️ Modo Claro</button>
     </aside>
 
-    <!-- Contenido -->
+    <!-- Contenido Principal -->
     <main>
+        <!-- Pequeño Hero superior -->
+        <header class="hero">
+            <h1>~/asir-wiki</h1>
+            <p>Guía rápida de comandos y administración de sistemas</p>
+        </header>
+
         <!-- Sección 1 -->
         <section id="linux-basico">
-            <h1>Linux & Bash: Administración Básica</h1>
+            <h2>Linux & Bash: Administración Básica</h2>
             <p>Operaciones frecuentes de gestión de usuarios, permisos y control de servicios locales.</p>
             
-            <h2>Gestión de Permisos y Propietarios</h2>
+            <h3>Gestión de Permisos y Propietarios</h3>
             <pre><code># Cambiar permisos de un archivo o script a ejecutable
 chmod +x script.sh
 
@@ -48,7 +47,7 @@ sudo chmod -R 755 /var/www/html
 # Cambiar propietario y grupo recursivamente
 sudo chown -R www-data:www-data /var/www/html</code></pre>
 
-            <h2>Gestión de Servicios (Systemd)</h2>
+            <h3>Gestión de Servicios (Systemd)</h3>
             <pre><code># Iniciar, detener o reiniciar un servicio
 sudo systemctl start apache2
 sudo systemctl stop nginx
@@ -61,10 +60,10 @@ sudo systemctl enable --now ufw</code></pre>
 
         <!-- Sección 2 -->
         <section id="redes-linux">
-            <h1>Diagnóstico de Redes y DNS en Linux</h1>
+            <h2>Diagnóstico de Redes y DNS en Linux</h2>
             <p>Comandos esenciales para verificar interfaces, tablas de rutas, resolución de nombres y conectividad.</p>
 
-            <h2>Interfaces y Conexiones</h2>
+            <h3>Interfaces y Conexiones</h3>
             <pre><code># Ver estado de interfaces de red y direcciones IP
 ip a
 
@@ -74,7 +73,7 @@ sudo ss -tulpn
 # Ver la tabla de enrutamiento IP del sistema
 ip route show</code></pre>
 
-            <h2>Resolución de Nombres (DNS) y Trazado</h2>
+            <h3>Resolución de Nombres (DNS) y Trazado</h3>
             <pre><code># Consulta detallada de registros DNS con dig (ej: tipo A o MX)
 dig @8.8.8.8 asir.es
 dig +short A example.com
@@ -93,10 +92,10 @@ ping -c 4 192.168.1.1</code></pre>
 
         <!-- Sección 3 -->
         <section id="cisco">
-            <h1>Redes Cisco (IOS)</h1>
+            <h2>Redes Cisco (IOS)</h2>
             <p>Configuración básica de dispositivos, interfaces, direccionamiento y rutas estáticas en equipos Cisco.</p>
             
-            <h2>Configuración Global e Interfaces</h2>
+            <h3>Configuración Global e Interfaces</h3>
             <pre><code>enable
 configure terminal
 hostname R1
@@ -108,7 +107,7 @@ interface GigabitEthernet0/0
  no shutdown
 exit</code></pre>
 
-            <h2>Rutas Estáticas y Guardado</h2>
+            <h3>Rutas Estáticas y Guardado</h3>
             <pre><code>! Añadir una ruta estática por defecto (gateway)
 ip route 0.0.0.0 0.0.0.0 192.168.1.254
 
@@ -119,7 +118,7 @@ write memory
 
         <!-- Sección 4 -->
         <section id="subnetting">
-            <h1>Tabla de Subnetting IPv4</h1>
+            <h2>Tabla de Subnetting IPv4</h2>
             <p>Referencia rápida de prefijos CIDR, máscaras de subred decimales y cantidad de hosts útiles disponibles.</p>
             <table>
                 <thead>
@@ -164,13 +163,12 @@ write memory
             </table>
         </section>
 
-        <!-- Pie de página -->
+        <!-- Pie de página (Footer) con autor y enlace a GitHub -->
         <footer>
-            <p>Wiki Técnica ASIR — Creado para prácticas y consulta de sistemas</p>
+            <p>Desarrollado por <strong>Samuel Monje Borrallo</strong> — <a href="https://github.com/s7mu" target="_blank">github.com/s7mu</a></p>
         </footer>
     </main>
 
-    <!-- Enlace al archivo JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
