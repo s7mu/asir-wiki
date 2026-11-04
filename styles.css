@@ -1,0 +1,150 @@
+/* Variables de color estilo terminal / VS Code */
+:root {
+  --bg-main: #0d1117;
+  --bg-sidebar: #161b22;
+  --border-color: #30363d;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-blue: #58a6ff;
+  --accent-green: #7ee787;
+  --code-bg: #111418;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Barra lateral fija */
+aside {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  padding: 30px 20px;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.logo-area {
+  margin-bottom: 30px;
+}
+
+.logo-area h2 {
+  font-size: 1.1rem;
+  color: var(--accent-blue);
+  font-family: monospace;
+  letter-spacing: 0.5px;
+}
+
+.logo-area span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside li {
+  margin-bottom: 8px;
+}
+
+aside a {
+  color: var(--text-main);
+  text-decoration: none;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: background 0.15s ease;
+}
+
+aside a:hover {
+  background-color: rgba(88, 166, 255, 0.1);
+  color: var(--accent-blue);
+}
+
+/* Contenido principal */
+main {
+  margin-left: 260px;
+  padding: 50px;
+  max-width: 950px;
+  width: 100%;
+}
+
+section {
+  margin-bottom: 60px;
+  scroll-margin-top: 40px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: var(--accent-blue);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 30px 0 10px 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 15px;
+  color: var(--text-muted);
+}
+
+/* Bloques de código mejorados */
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+code {
+  color: var(--accent-green);
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  font-size: 0.9rem;
+}
+
+/* Tabla de subredes */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: var(--bg-sidebar);
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.03);
+}

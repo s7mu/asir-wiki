@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Técnica ASIR - Guía de Comandos</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Menú lateral -->
+    <aside>
+        <div class="logo-area">
+            <h2>~/asir-wiki</h2>
+            <span>Administración de Sistemas</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#linux-basico">1. Linux: Permisos y Usuarios</a></li>
+                <li><a href="#redes-linux">2. Redes y DNS en Linux</a></li>
+                <li><a href="#cisco">3. Redes Cisco (IOS)</a></li>
+                <li><a href="#subnetting">4. Tabla de Subnetting</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido -->
+    <main>
+        <!-- Sección 1 -->
+        <section id="linux-basico">
+            <h1>Linux & Bash: Administración Básica</h1>
+            <p>Operaciones frecuentes de gestión de usuarios, permisos y control de servicios locales.</p>
+            
+            <h2>Gestión de Permisos y Propietarios</h2>
+            <pre><code># Cambiar permisos de un archivo o script a ejecutable
+chmod +x script.sh
+
+# Cambiar permisos de forma recursiva en un directorio web
+sudo chmod -R 755 /var/www/html
+
+# Cambiar propietario y grupo recursivamente
+sudo chown -R www-data:www-data /var/www/html</code></pre>
+
+            <h2>Gestión de Servicios (Systemd)</h2>
+            <pre><code># Iniciar, detener o reiniciar un servicio
+sudo systemctl start apache2
+sudo systemctl stop nginx
+sudo systemctl restart ssh
+
+# Comprobar estado y habilitar inicio automático al arrancar
+sudo systemctl status isc-dhcp-server
+sudo systemctl enable --now ufw</code></pre>
+        </section>
+
+        <!-- Sección 2 -->
+        <section id="redes-linux">
+            <h1>Diagnóstico de Redes y DNS en Linux</h1>
+            <p>Comandos esenciales para verificar interfaces, tablas de rutas, resolución de nombres y conectividad.</p>
+
+            <h2>Interfaces y Conexiones</h2>
+            <pre><code># Ver estado de interfaces de red y direcciones IP
+ip a
+
+# Comprobar sockets abiertos y puertos en escucha (TCP/UDP)
+sudo ss -tulpn
+
+# Ver la tabla de enrutamiento IP del sistema
+ip route show</code></pre>
+
+            <h2>Resolución de Nombres (DNS) y Trazado</h2>
+            <pre><code># Consulta detallada de registros DNS con dig (ej: tipo A o MX)
+dig @8.8.8.8 asir.es
+dig +short A example.com
+
+# Consulta rápida de DNS con nslookup
+nslookup
+> server 1.1.1.1
+> www.google.com
+
+# Trazar la ruta de paquetes hacia un destino con traceroute
+traceroute -n 8.8.8.8
+
+# Comprobar conectividad y latencia básica
+ping -c 4 192.168.1.1</code></pre>
+        </section>
+
+        <!-- Sección 3 -->
+        <section id="cisco">
+            <h1>Redes Cisco (IOS)</h1>
+            <p>Configuración básica de dispositivos, interfaces, direccionamiento y rutas estáticas en equipos Cisco.</p>
+            
+            <h2>Configuración Global e Interfaces</h2>
+            <pre><code>enable
+configure terminal
+hostname R1
+
+! Configurar IP en interfaz y levantarla
+interface GigabitEthernet0/0
+ ip address 192.168.1.1 255.255.255.0
+ description Enlace_LAN
+ no shutdown
+exit</code></pre>
+
+            <h2>Rutas Estáticas y Guardado</h2>
+            <pre><code>! Añadir una ruta estática por defecto (gateway)
+ip route 0.0.0.0 0.0.0.0 192.168.1.254
+
+! Guardar la configuración en la NVRAM
+write memory
+! o también: copy running-config startup-config</code></pre>
+        </section>
+
+        <!-- Sección 4 -->
+        <section id="subnetting">
+            <h1>Tabla de Subnetting IPv4</h1>
+            <p>Referencia rápida de prefijos CIDR, máscaras de subred decimales y cantidad de hosts útiles disponibles.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Prefijo CIDR</th>
+                        <th>Máscara de Subred</th>
+                        <th>Hosts Utilizables</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/24</td>
+                        <td>255.255.255.0</td>
+                        <td>254</td>
+                    </tr>
+                    <tr>
+                        <td>/25</td>
+                        <td>255.255.255.128</td>
+                        <td>126</td>
+                    </tr>
+                    <tr>
+                        <td>/26</td>
+                        <td>255.255.255.192</td>
+                        <td>62</td>
+                    </tr>
+                    <tr>
+                        <td>/27</td>
+                        <td>255.255.255.224</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>/28</td>
+                        <td>255.255.255.240</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>/29</td>
+                        <td>255.255.255.248</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+</body>
+</html>
