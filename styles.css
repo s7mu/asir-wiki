@@ -1,4 +1,4 @@
-/* Variables de color estilo terminal / VS Code */
+/* Variables de color estilo terminal / VS Code (Modo Oscuro por defecto) */
 :root {
   --bg-main: #0d1117;
   --bg-sidebar: #161b22;
@@ -23,6 +23,7 @@ body {
   display: flex;
   min-height: 100vh;
   line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Barra lateral fija */
@@ -34,6 +35,9 @@ aside {
   position: fixed;
   height: 100%;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo-area {
@@ -73,6 +77,25 @@ aside a {
 aside a:hover {
   background-color: rgba(88, 166, 255, 0.1);
   color: var(--accent-blue);
+}
+
+/* Botón de cambio de tema */
+.theme-btn {
+  background-color: var(--border-color);
+  color: var(--text-main);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.15s ease;
+}
+
+.theme-btn:hover {
+  background-color: var(--accent-blue);
+  color: #fff;
 }
 
 /* Contenido principal */
@@ -147,4 +170,14 @@ th {
 
 tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Pie de página (Footer) */
+footer {
+  margin-top: 80px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
 }

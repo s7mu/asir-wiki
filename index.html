@@ -4,25 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wiki Técnica ASIR - Guía de Comandos</title>
-    <!-- Enlace al archivo CSS externo -->
+    <!-- Enlaces a los archivos CSS -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="light.css">
 </head>
 <body>
 
     <!-- Menú lateral -->
     <aside>
-        <div class="logo-area">
-            <h2>~/asir-wiki</h2>
-            <span>Administración de Sistemas</span>
+        <div>
+            <div class="logo-area">
+                <h2>~/asir-wiki</h2>
+                <span>Administración de Sistemas</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#linux-basico">1. Linux: Permisos y Usuarios</a></li>
+                    <li><a href="#redes-linux">2. Redes y DNS en Linux</a></li>
+                    <li><a href="#cisco">3. Redes Cisco (IOS)</a></li>
+                    <li><a href="#subnetting">4. Tabla de Subnetting</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#linux-basico">1. Linux: Permisos y Usuarios</a></li>
-                <li><a href="#redes-linux">2. Redes y DNS en Linux</a></li>
-                <li><a href="#cisco">3. Redes Cisco (IOS)</a></li>
-                <li><a href="#subnetting">4. Tabla de Subnetting</a></li>
-            </ul>
-        </nav>
+        
+        <!-- Botón para alternar el tema -->
+        <button id="theme-toggle" class="theme-btn">☀️ Modo Claro</button>
     </aside>
 
     <!-- Contenido -->
@@ -157,7 +163,14 @@ write memory
                 </tbody>
             </table>
         </section>
+
+        <!-- Pie de página -->
+        <footer>
+            <p>Wiki Técnica ASIR — Creado para prácticas y consulta de sistemas</p>
+        </footer>
     </main>
 
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

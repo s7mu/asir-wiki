@@ -1,0 +1,16 @@
+/* Variables específicas para el modo claro */
+body.light-mode {
+  --bg-main: #ffffff;
+  --bg-sidebar: #f6f8fa;
+  --border-color: #d0d7de;
+  --text-main: #24292f;
+  --text-muted: #57606a;
+  --accent-blue: #0969da;
+  --accent-green: #1a7f37;
+  --code-bg: #f6f8fa;
+}
+
+/* Ajuste específico para filas pares en tablas en modo claro */
+body.light-mode tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
