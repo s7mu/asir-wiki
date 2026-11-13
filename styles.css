@@ -193,3 +193,59 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* Contenedor de tablas responsive (evita que rompan el diseño en pantallas estrechas) */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Estilos para los logotipos RSS/Atom en el footer */
+.footer-feeds {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.feed-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.15s ease;
+}
+
+.feed-link:hover {
+  color: var(--accent-blue);
+}
+
+.feed-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* MEDIA QUERIES PARA RESPONSIVE (Móviles y Tablets) */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  /* En pantallas pequeñas, el aside pasa arriba como barra de navegación horizontal o bloque */
+  aside {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+  }
+
+  /* El contenido principal se desmarca de los 260px del lateral izquierdo */
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+    <!-- Prólogo -->
+    <title>ASIR Wiki - Guía de Comandos</title>
+    <link>https://s7mu.github.io/asir-wiki/</link>
+    <description>Canal de noticias y actualizaciones de la Wiki técnica de ASIR</description>
+    <category>sistemas/redes/linux/cisco</category>
+    <copyright>1º ASIR - Samuel Monje Borrallo</copyright>
+    <image>
+        <url>https://s7mu.github.io/asir-wiki/viajes.jpg</url>
+        <title>ASIR Wiki</title>
+        <link>https://s7mu.github.io/asir-wiki/</link>
+        <width>30</width>
+        <height>30</height>
+    </image>
+    <language>es-es</language>
+    <lastBuildDate>Fri, 13 Nov 2026 11:00:00 +0100</lastBuildDate>
+    <webMaster>samuuborrallo3@gmail.com</webMaster>
+
+    <!-- Noticias del canal -->
+    <item>
+        <title>Linux &amp; Bash: Administración Básica</title>
+        <description>
+            Actualización con comandos esenciales de permisos (chmod, chown) y gestión de servicios systemd.
+        </description>
+        <link>https://s7mu.github.io/asir-wiki/#linux-basico</link>
+        <author>samuuborrallo3@gmail.com</author>
+        <category>linux</category>
+        <pubDate>Fri, 13 Nov 2026 10:00:00 +0100</pubDate>
+    </item>
+
+    <item>
+        <title>Redes Cisco (IOS)</title>
+        <description>
+            Nueva sección con configuraciones básicas de interfaces, direccionamiento y rutas estáticas.
+        </description>
+        <link>https://s7mu.github.io/asir-wiki/#cisco</link>
+        <author>samuuborrallo3@gmail.com</author>
+        <category>cisco</category>
+        <pubDate>Fri, 13 Nov 2026 10:30:00 +0100</pubDate>
+    </item>
+</channel>
+</rss>

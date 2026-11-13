@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es" xml:base="https://s7mu.github.io/asir-wiki/">
+    <id>https://s7mu.github.io/asir-wiki/</id>
+    <title>ASIR Wiki Atom</title>
+    <updated>2026-11-13T11:00:00+01:00</updated>
+    <link rel="alternate" href="https://s7mu.github.io/asir-wiki/atom.xml"/>
+    
+    <author>
+        <name>Samuel Monje Borrallo</name>
+        <email>samuuborrallo3@gmail.com</email>
+    </author>
+    
+    <category term="Administración de Sistemas Informáticos en Red"/>
+    
+    <contributor>
+        <name>IES Medina Azahara</name>
+        <email>info@iesmedinaazahara.es</email>
+        <uri>https://www.iesmedinaazahara.es</uri>
+    </contributor>
+    
+    <logo>https://s7mu.github.io/asir-wiki/viajes.jpg</logo>
+
+    <entry>
+        <id>https://s7mu.github.io/asir-wiki/#linux-basico</id>
+        <title>Administración básica en Linux</title>
+        <updated>2026-11-13T10:00:00+01:00</updated>
+        <author>
+            <name>Samuel Monje Borrallo</name>
+            <email>samuuborrallo3@gmail.com</email>
+        </author>
+        <summary>
+            Guía rápida de comandos para la gestión de usuarios, permisos y servicios en Linux.
+        </summary>
+        <link rel="alternate" href="https://s7mu.github.io/asir-wiki/#linux-basico"/>
+    </entry>
+</feed>
